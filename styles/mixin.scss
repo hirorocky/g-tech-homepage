@@ -1,0 +1,14 @@
+$media-pc: 992px;
+$media-sp: 991px;
+
+@mixin pc {
+  @media only screen and (min-width: $media-pc ) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media only screen and (max-width: $media-sp) {
+    @content;
+  }
+}

@@ -1,0 +1,128 @@
+@import "mixin";
+
+.container {
+  @include pc {
+    max-width: $media-pc;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 0px 7px;
+  }
+}
+
+.welcome-image {
+  display: flex;
+  background-image: url("/top_image.jpg");
+  background-size: cover;
+
+  height: 500px;
+  width: 100%;
+  margin-top: 100px;
+  flex-direction: row-reverse;
+  padding: 30px;
+
+  &__box {
+    background-color: #c3bfc7c1;
+    padding: 20px 30px;
+    max-width: 400px;
+    height: fit-content;
+
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+}
+
+.header-2 {
+  font-size: 2rem;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+.about--pc {
+  @include pc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .description {
+      font-size: 1rem;
+
+      p.divided {
+        margin-bottom: 15px;
+      }
+    }
+
+    .image {
+      width: 100%;
+
+      img {
+        position: relative !important;
+      }
+    }
+  }
+
+  @include sp {
+    display: none;
+  }
+}
+
+.about--sp {
+  @include sp {
+    p.divided {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include pc {
+    display: none;
+  }
+}
+
+.disabled {
+  display: none;
+}
+
+.activity-container {
+  display: grid;
+
+  @include pc {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  @include sp {
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .activity-item {
+    img {
+      @include sp {
+        width: 100vw;
+        height: auto;
+      }
+    }
+
+    .title {
+      font-size: 1.2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+}
+
+.join-discord-box {
+  border-top: 1px white solid;
+  display: flex;
+}
