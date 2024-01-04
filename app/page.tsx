@@ -126,7 +126,24 @@ export default function Home()
       </div>
 
       <div className={styles['join-discord-box']}>
-
+        <div className={styles['join-discord-box__title']}>
+          <Image
+            src="/discord.png"
+            alt="Discordのアイコン"
+            width={80}
+            height={81}
+          />
+          <div className={`${styles.text} ${anton.className}`}>Join our Discord!</div>
+        </div>
+        <div>コミュニケーションは基本的にDiscord上でわいわい交流しています。</div>
+        <div>興味のある方は下のボタンからお気軽にご参加ください！​</div>
+        <a
+          href="https://discord.com/invite/xSDd9qvZB7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles['join-discord-box__button']}>
+          Discordに参加する
+        </a>
       </div>
     </main>
   )

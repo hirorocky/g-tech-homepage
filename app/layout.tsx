@@ -53,6 +53,9 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <footer className={`${styles.footer} ${anton.className}`}>
+          © 2024 by G-tech Tokyo
+        </footer>
       </body>
     </html>
   )

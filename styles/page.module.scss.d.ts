@@ -10,6 +10,9 @@ export type Styles = {
   'header-2': string;
   'image': string;
   'join-discord-box': string;
+  'join-discord-box__button': string;
+  'join-discord-box__title': string;
+  'text': string;
   'title': string;
   'welcome-image': string;
   'welcome-image__box': string;
